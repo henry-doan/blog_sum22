@@ -35,6 +35,6 @@ class Api::PagesController < ApplicationController
 
   private 
     def page_params
-      params.require(:page).require(:title, :author, :body)
+      params.require(:page).permit(:title, :author, :body)
     end
 end
